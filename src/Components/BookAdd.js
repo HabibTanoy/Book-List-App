@@ -27,6 +27,11 @@ class BookAdd extends Component {
         .catch(error => {
             console.log(error)
         })
+        this.setState({
+          bookName:'',
+          author:'',
+          year:''
+        })
      }
     
     render() { 
@@ -44,6 +49,7 @@ class BookAdd extends Component {
         })
         return ( 
             <div className="text-center">
+              <h2>Book List App</h2>
                 <form onSubmit={this.submitHandler}>
                   <div className="form-group">
                     <label>Book Name</label>
